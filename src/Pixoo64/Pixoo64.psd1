@@ -6,7 +6,7 @@
     ModuleVersion = '1.0.0'
 
     # Supported PSEditions
-    CompatiblePSEditions = @('Desktop', 'Core')
+    CompatiblePSEditions = @('Core')
 
     # ID used to uniquely identify this module
     GUID = 'f99e6162-6ea3-4c4f-baa1-dfc53d53b7c1'
@@ -24,7 +24,7 @@
     Description = 'PowerShell module for controlling the Divoom Pixoo64 LED display via REST API. Provides complete API coverage with 31 functions for device discovery, display control, animations, tools, and settings.'
 
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion = '5.1'
+    PowerShellVersion = '7.0'
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     FunctionsToExport = @(
@@ -107,7 +107,7 @@ Complete PowerShell module for Pixoo64 LED display control:
 - Device discovery (cloud + ARP cache + full subnet scan)
 - Pipeline support throughout (Find-Pixoo | Connect-Pixoo)
 - Comprehensive error handling with retry logic
-- Cross-platform (PowerShell 5.1+ and 7+)
+- Cross-platform (PowerShell 7+)
 - Complete documentation and examples
 - Unit and integration test infrastructure
 

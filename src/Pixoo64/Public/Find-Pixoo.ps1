@@ -162,7 +162,7 @@ function Find-Pixoo {
             Write-Verbose "Reading ARP cache"
 
             try {
-                if ($IsWindows -or $PSVersionTable.PSVersion.Major -le 5) {
+                if ($IsWindows) {
                     # Windows
                     $arpOutput = & arp -a
                     foreach ($line in $arpOutput) {
