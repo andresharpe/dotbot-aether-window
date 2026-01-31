@@ -1,0 +1,35 @@
+# PowerShell Module Build Artifacts
+*.zip
+publish/
+*.nupkg
+
+# Test Results
+TestResults/
+*.trx
+coverage.xml
+codecoverage/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and Temp Files
+*.log
+*.tmp
+*.temp
+
+# PowerShell Profile and Secrets
+*.ps1xml.bak
+.env
+secrets.json
+
+# Keep .claude folder (for project context)
+# .claude/
