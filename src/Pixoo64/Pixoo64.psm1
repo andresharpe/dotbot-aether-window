@@ -102,4 +102,9 @@ Export-ModuleMember -Function @(
     'Set-PixooTemperatureUnit'
     'Set-PixooHighLightMode'
     'Set-PixooCustomPageIndex'
+    'Set-PixooTime'
+    'Set-PixooTimeZone'
+    'Set-PixooLocation'
+    'Set-PixooWhiteBalance'
+    'Invoke-PixooRemoteCommands'
 )

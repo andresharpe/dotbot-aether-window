@@ -7,7 +7,7 @@ A comprehensive PowerShell module for controlling the Divoom Pixoo64 LED display
 
 ## Features
 
-- **Complete API Coverage** - All 31 documented endpoints supported
+- **Complete API Coverage** - All 36 documented endpoints supported
 - **Device Discovery** - Cloud, ARP cache, and full subnet scanning
 - **Pipeline Support** - Seamless integration with PowerShell pipelines
 - **Comprehensive Error Handling** - Automatic retry logic with exponential backoff
@@ -51,7 +51,7 @@ Disconnect-Pixoo
 
 ## Functions Overview
 
-The module provides **31 public functions** organized into six categories:
+The module provides **36 public functions** organized into six categories:
 
 ### Connection & Discovery (5 functions)
 - `Find-Pixoo` - Discover devices (cloud + ARP + full scan)
@@ -78,8 +78,9 @@ The module provides **31 public functions** organized into six categories:
 - `Get-PixooGifId` - Get current GIF frame ID
 - `Send-PixooGifUrl` - Play GIF from URL or SD card
 
-### Batch Commands (1 function)
+### Batch Commands (2 functions)
 - `Invoke-PixooCommandBatch` - Send multiple commands efficiently
+- `Invoke-PixooRemoteCommands` - Execute commands from remote URL
 
 ### Tools (5 functions)
 - `Start-PixooTimer` - Countdown timer
@@ -88,13 +89,17 @@ The module provides **31 public functions** organized into six categories:
 - `Start-PixooBuzzer` - Activate buzzer
 - `Set-PixooNoiseMeter` - Audio visualizer
 
-### Device Settings (6 functions)
+### Device Settings (10 functions)
 - `Set-PixooRotation` - Set rotation angle (0/90/180/270)
 - `Set-PixooMirrorMode` - Enable/disable mirror mode
 - `Set-PixooTimeFormat` - Set 12/24 hour format
 - `Set-PixooTemperatureUnit` - Set Celsius/Fahrenheit
 - `Set-PixooHighLightMode` - Enable high brightness (requires 5V3A)
 - `Set-PixooCustomPageIndex` - Set custom channel page
+- `Set-PixooTime` - Sync device clock (DateTime or Unix timestamp)
+- `Set-PixooTimeZone` - Set device time zone (e.g., "GMT-5")
+- `Set-PixooLocation` - Set coordinates for weather display
+- `Set-PixooWhiteBalance` - Adjust RGB white balance
 
 ## Examples
 

@@ -151,6 +151,27 @@ Describe 'Pixoo Mutation Functions Integration Tests' -Tag 'Integration' {
         It 'Set-PixooCustomPageIndex sets page index' {
             { Set-PixooCustomPageIndex -PageIndex 0 } | Should -Not -Throw
         }
+
+        It 'Set-PixooTime sets device time with DateTime' {
+            { Set-PixooTime -DateTime (Get-Date) } | Should -Not -Throw
+        }
+
+        It 'Set-PixooTime sets device time with Unix timestamp' {
+            $utc = [long]([DateTime]::UtcNow - [DateTime]::new(1970,1,1,0,0,0,[DateTimeKind]::Utc)).TotalSeconds
+            { Set-PixooTime -Utc $utc } | Should -Not -Throw
+        }
+
+        It 'Set-PixooTimeZone sets time zone' {
+            { Set-PixooTimeZone -TimeZone "GMT+0" } | Should -Not -Throw
+        }
+
+        It 'Set-PixooLocation sets coordinates' {
+            { Set-PixooLocation -Longitude 0 -Latitude 51.5 } | Should -Not -Throw
+        }
+
+        It 'Set-PixooWhiteBalance sets white balance' {
+            { Set-PixooWhiteBalance -Red 100 -Green 100 -Blue 100 } | Should -Not -Throw
+        }
     }
 
     Context 'Tools' -Skip:(-not $env:PIXOO_TEST_IP) {
