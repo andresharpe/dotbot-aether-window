@@ -7,7 +7,7 @@
 #>
 
 # Import the module and connect
-Import-Module ..\src\Pixoo64\Pixoo64.psd1 -Force
+Import-Module "$PSScriptRoot\..\src\Pixoo64\Pixoo64.psd1" -Force
 
 # Connect to device (replace with your IP or use Find-Pixoo)
 $device = Find-Pixoo | Select-Object -First 1
@@ -19,6 +19,10 @@ if (-not $device) {
 Connect-Pixoo -IPAddress $device.IP
 
 Write-Host "`n=== Text Display Examples ===" -ForegroundColor Cyan
+
+# IMPORTANT: Text commands only work after sending an image first
+# Set a black background before displaying text
+Set-PixooSolidColor -HexColor "#000000"
 
 # Example 1: Basic text with default settings
 Write-Host "1. Basic green text" -ForegroundColor Yellow

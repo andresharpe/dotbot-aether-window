@@ -41,6 +41,8 @@ function Send-PixooText {
 
     .NOTES
         API Endpoint: Draw/SendHttpText
+        IMPORTANT: Text commands only work after an image/animation has been sent to the device.
+        Call Set-PixooSolidColor or Send-PixooImage first to initialize the display.
         Most fonts only support left scrolling. Right scrolling is limited.
         Use Clear-PixooText to remove text overlays.
     #>

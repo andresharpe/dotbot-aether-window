@@ -7,7 +7,7 @@
 #>
 
 # Import the module
-Import-Module ..\src\Pixoo64\Pixoo64.psd1 -Force
+Import-Module "$PSScriptRoot\..\src\Pixoo64\Pixoo64.psd1" -Force
 
 # Method 1: Discover devices automatically
 Write-Host "`n=== Device Discovery ===" -ForegroundColor Cyan
