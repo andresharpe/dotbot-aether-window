@@ -25,7 +25,8 @@ Describe 'Connect-Pixoo' {
 
     Context 'Parameter Validation' {
         It 'Requires IPAddress parameter' {
-            { Connect-Pixoo } | Should -Throw
+            # Use $null to test mandatory parameter validation without prompting
+            { Connect-Pixoo -IPAddress $null } | Should -Throw
         }
 
         It 'Accepts IPAddress from pipeline' {
