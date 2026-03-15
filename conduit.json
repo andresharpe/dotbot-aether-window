@@ -2,20 +2,18 @@
   "name": "window",
   "type": "window",
   "version": "1.0.0",
-  "module": "src/AetherWindow/AetherWindow.psd1",
+  "description": "Visual display conduit — Pixoo-64 LED panel integration",
+  "module": "src/DotBot.Aether.Window/DotBot.Aether.Window.psd1",
+  "repo": "https://github.com/andresharpe/dotbot-aether-window",
   "capabilities": ["display-text", "display-image", "display-animation", "display-gif", "clock-face", "timer", "stopwatch", "scoreboard", "noise-meter", "buzzer", "batch-commands"],
   "discovery": "lan",
   "protocol": "http-rest",
   "platforms": ["windows", "linux", "macos"],
-  "upstream": {
-    "repo": "https://github.com/andresharpe/Pixoo",
-    "module": "Pixoo64",
-    "version": "1.0.0"
-  },
-  "events": [
-    "task.started",
-    "task.completed",
-    "task.failed",
-    "workflow.completed"
-  ]
+  "events": ["task.started", "task.completed", "task.failed", "workflow.completed"],
+  "settings": {
+    "idle_display": { "type": "string", "default": "clock", "enum": ["clock", "dashboard", "off"] },
+    "brightness": { "type": "integer", "default": 75, "min": 0, "max": 100 },
+    "scroll_speed": { "type": "integer", "default": 50, "min": 0, "max": 100 },
+    "auto_reconnect": { "type": "boolean", "default": true }
+  }
 }

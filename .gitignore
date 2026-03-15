@@ -1,35 +1,49 @@
-# PowerShell Module Build Artifacts
-*.zip
+# PowerShell
+*.pdb
+TestResults/
+coverage*.xml
+coverage*.json
+coverage*.info
+*.coverage
+*.coveragexml
+
+# .NET build
+[Bb]in/
+[Oo]bj/
 publish/
 *.nupkg
+*.snupkg
 
-# Test Results
-TestResults/
-*.trx
-coverage.xml
-codecoverage/
+# Node
+node_modules/
+*.tgz
 
-# IDE and Editor Files
+# IDE / Editor
 .vscode/
 .idea/
+.vs/
+.claude/
+*.suo
+*.user
+*.code-workspace
 *.swp
 *.swo
 *~
 
-# OS Files
+# OS
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Logs and Temp Files
-*.log
-*.tmp
-*.temp
-
-# PowerShell Profile and Secrets
-*.ps1xml.bak
+# Environment / Secrets
 .env
+.env.local
 secrets.json
 
-# Keep .claude folder (for project context)
-# .claude/
+# Logs
+*.log
+logs/
+
+# Temp
+*.tmp
+temp/
