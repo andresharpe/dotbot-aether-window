@@ -1,0 +1,21 @@
+{
+  "name": "window",
+  "type": "window",
+  "version": "1.0.0",
+  "module": "src/AetherWindow/AetherWindow.psd1",
+  "capabilities": ["display-text", "display-image", "display-animation", "display-gif", "clock-face", "timer", "stopwatch", "scoreboard", "noise-meter", "buzzer", "batch-commands"],
+  "discovery": "lan",
+  "protocol": "http-rest",
+  "platforms": ["windows", "linux", "macos"],
+  "upstream": {
+    "repo": "https://github.com/andresharpe/Pixoo",
+    "module": "Pixoo64",
+    "version": "1.0.0"
+  },
+  "events": [
+    "task.started",
+    "task.completed",
+    "task.failed",
+    "workflow.completed"
+  ]
+}

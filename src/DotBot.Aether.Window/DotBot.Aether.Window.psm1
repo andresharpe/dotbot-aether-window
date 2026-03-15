@@ -60,6 +60,13 @@ $MyInvocation.MyCommand.ScriptBlock.Module.OnRemove = {
 
 # Export public functions (defined in manifest)
 Export-ModuleMember -Function @(
+    # Aether Interface Contract
+    'Initialize-AetherWindow'
+    'Find-AetherWindow'
+    'Connect-AetherWindow'
+    'Disconnect-AetherWindow'
+    'Test-AetherWindow'
+    'Invoke-AetherWindowEvent'
     # Connection & Discovery
     'Find-Pixoo'
     'Connect-Pixoo'

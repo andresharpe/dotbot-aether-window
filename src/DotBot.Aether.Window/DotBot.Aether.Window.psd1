@@ -1,6 +1,6 @@
 @{
     # Script module or binary module file associated with this manifest.
-    RootModule = 'Pixoo64.psm1'
+    RootModule = 'DotBot.Aether.Window.psm1'
 
     # Version number of this module.
     ModuleVersion = '1.0.0'
@@ -12,22 +12,29 @@
     GUID = 'f99e6162-6ea3-4c4f-baa1-dfc53d53b7c1'
 
     # Author of this module
-    Author = 'Pixoo64 PowerShell Module Contributors'
+    Author = 'Andre'
 
     # Company or vendor of this module
-    CompanyName = 'Community'
+    CompanyName = 'DotBot'
 
     # Copyright statement for this module
-    Copyright = '(c) 2026 Pixoo64 PowerShell Module Contributors. All rights reserved.'
+    Copyright = '(c) 2026 Andre. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description = 'PowerShell module for controlling the Divoom Pixoo64 LED display via REST API. Provides complete API coverage with 31 functions for device discovery, display control, animations, tools, and settings.'
+    Description = 'DotBot Aether Window Conduit — Divoom Pixoo-64 LED display control via REST API. Part of the dotbot-aether conduit plugin collection.'
 
     # Minimum version of the PowerShell engine required by this module
     PowerShellVersion = '7.0'
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     FunctionsToExport = @(
+        # Aether Interface Contract (6)
+        'Initialize-AetherWindow'
+        'Find-AetherWindow'
+        'Connect-AetherWindow'
+        'Disconnect-AetherWindow'
+        'Test-AetherWindow'
+        'Invoke-AetherWindowEvent'
         # Connection & Discovery (5)
         'Find-Pixoo'
         'Connect-Pixoo'
@@ -90,13 +97,13 @@
     PrivateData = @{
         PSData = @{
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @('Pixoo64', 'Divoom', 'LED', 'Display', 'REST', 'API', 'IoT', 'Hardware')
+            Tags = @('DotBot', 'Aether', 'Window', 'Pixoo64', 'Divoom', 'LED', 'Display', 'REST', 'API', 'IoT', 'Hardware')
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/yourusername/Pixoo/blob/master/LICENSE'
+            LicenseUri = 'https://github.com/andresharpe/dotbot-aether-window/blob/main/LICENSE'
 
             # A URL to the main website for this project.
-            ProjectUri = 'https://github.com/yourusername/Pixoo'
+            ProjectUri = 'https://github.com/andresharpe/dotbot-aether-window'
 
             # ReleaseNotes of this module
             ReleaseNotes = @'
